@@ -1,0 +1,88 @@
+<section class="featured">
+  <p class="featured-label">Featured Articles</p>
+  <h2 class="featured-title">Unmissable Things To Do</h2>
+
+  <div class="articles">
+    <article class="feat-article">
+      <a href="/article" class="feat-link">
+        <img src="/Images/bike-balloons.jpg" alt="Bucket list adventures" class="feat-image" />
+        <div class="feat-content">
+          <p class="feat-category">Unmissable things to do</p>
+          <h3 class="feat-heading">Try These 5 Bucket List Adventures!</h3>
+        </div>
+      </a>
+    </article>
+
+    <article class="feat-article">
+      <a href="/article2" class="feat-link">
+        <img src="/Images/holzmarkt-berlin.jpg" alt="Holzmarkt Berlin" class="feat-image" />
+        <div class="feat-content">
+          <p class="feat-category">Unmissable things to do</p>
+          <h3 class="feat-heading">Holzmarkt Berlin: A Hidden Gem of Music, Art, and Vibes</h3>
+        </div>
+      </a>
+    </article>
+  </div>
+</section>
+
+<style>
+  .featured {
+    background-color: #b45a70;
+    color: #fff;
+    padding: 3rem 1.5rem;
+    font-family: sans-serif;
+  }
+
+  .featured-label {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .featured-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.5rem;
+  }
+
+  .articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .feat-article {
+    background: transparent;
+  }
+
+  .feat-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .feat-image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .feat-content {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .feat-category {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .feat-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+</style>
