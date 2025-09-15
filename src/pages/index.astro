@@ -6,6 +6,8 @@ import imglocal1 from "../assets/localCRTV1.webp";
 import imglocal2 from "../assets/localCRTV2.webp";
 import imglocal3 from "../assets/localCRTV3.webp";
 import img1 from "../assets/artikel_foto1.webp";
+import Feat_article from "../components/Feat_article.astro";
+import FeatArticle from "../components/Feat_article.astro";
 ---
 
 <Layout>
@@ -18,10 +20,7 @@ import img1 from "../assets/artikel_foto1.webp";
         <Image src={imglocal1} alt="billede 1 til localCRTV" />
         <div class="text">
           <h6 class="label">LOCAL CRTV</h6>
-          <p>
-            Take a long stroll along history and get inspired by all the
-            wonderful art at East Side Gallery in Berlin
-          </p>
+          <p>Take a long stroll along history and get inspired by all the wonderful art at East Side Gallery in Berlin</p>
         </div>
       </article>
       <!-- ----- -->
@@ -29,10 +28,7 @@ import img1 from "../assets/artikel_foto1.webp";
         <Image src={imglocal2} alt="billede 2 til localCRTV" />
         <div class="text">
           <h6 class="label">LOCAL CRTV</h6>
-          <p>
-            Interview with Kristin Verita Katzer — a Berlin-based designer &
-            artist
-          </p>
+          <p>Interview with Kristin Verita Katzer — a Berlin-based designer & artist</p>
         </div>
       </article>
       <!-- ----- -->
@@ -56,8 +52,8 @@ import img1 from "../assets/artikel_foto1.webp";
     </div>
   </section>
   <!-- KODENING TIL DET LYSERØDE AFSNIT-->
+  <FeatArticle />
 </Layout>
-
 <style>
   /* FONTER */
   @font-face {
@@ -69,16 +65,14 @@ import img1 from "../assets/artikel_foto1.webp";
 
   @font-face {
     font-family: "Inter";
-    src: url("/public/Fonts/Inter_font/static/Inter_18pt-Light.ttf")
-      format("truetype");
+    src: url("/public/Fonts/Inter_font/static/Inter_18pt-Light.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: "InterBold";
-    src: url("/public/Fonts/Inter_font/static/Inter_18pt-Bold.ttf")
-      format("truetype");
+    src: url("/public/Fonts/Inter_font/static/Inter_18pt-Bold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }
