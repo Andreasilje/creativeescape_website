@@ -1,8 +1,12 @@
 <header>
   <div class="left-space"></div>
-  <div class="logo">CRTV | ESC →</div>
+  <div class="logo">
+    <a href="/">
+      <img src="/Images/logo.png" alt="logo" class="feat-image" />
+    </a>
+  </div>
   <div class="menu">
-    <a href="/pages/article.astro" class="btn">See more</a>
+    <a href="/article" class="btn">SEE MORE</a>
   </div>
 
   <style>
@@ -22,12 +26,14 @@
 
     /* Logo */
     .logo {
-      font-weight: bold;
-      color: #800000; /* mørkerød */
-      font-size: 20px;
-      border: 2px solid #800000;
-      padding: 5px 10px;
-      display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 150px;
+      height: auto;
     }
 
     /* Link-knap */
@@ -39,6 +45,7 @@
       font-size: 14px;
       border-radius: 5px;
       display: inline-block;
+      font-family: "Inter";
     }
 
     .btn:hover {

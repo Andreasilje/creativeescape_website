@@ -8,6 +8,7 @@ import imglocal3 from "../assets/localCRTV3.webp";
 import img1 from "../assets/artikel_foto1.webp";
 import Feat_article from "../components/Feat_article.astro";
 import FeatArticle from "../components/Feat_article.astro";
+import Expolre from "../components/Expolre.astro";
 ---
 
 <Layout>
@@ -20,7 +21,10 @@ import FeatArticle from "../components/Feat_article.astro";
         <Image src={imglocal1} alt="billede 1 til localCRTV" />
         <div class="text">
           <h6 class="label">LOCAL CRTV</h6>
-          <p>Take a long stroll along history and get inspired by all the wonderful art at East Side Gallery in Berlin</p>
+          <p>
+            Take a long stroll along history and get inspired by all the
+            wonderful art at East Side Gallery in Berlin
+          </p>
         </div>
       </article>
       <!-- ----- -->
@@ -28,7 +32,10 @@ import FeatArticle from "../components/Feat_article.astro";
         <Image src={imglocal2} alt="billede 2 til localCRTV" />
         <div class="text">
           <h6 class="label">LOCAL CRTV</h6>
-          <p>Interview with Kristin Verita Katzer — a Berlin-based designer & artist</p>
+          <p>
+            Interview with Kristin Verita Katzer — a Berlin-based designer &
+            artist
+          </p>
         </div>
       </article>
       <!-- ----- -->
@@ -42,105 +49,116 @@ import FeatArticle from "../components/Feat_article.astro";
     </div>
     <!-- Html til Højre kolonne -->
     <div class="højre-side">
-      <article class="bigcard">
-        <Image src={img1} alt="Artikel billede 1" />
-        <div class="text">
-          <p class="label">UNMISSABLE FREE GEMS</p>
-          <h2>WHAT CAN’T I MISS IN BERLIN AS A CREATIVE FIRST-TIMER?</h2>
-        </div>
-      </article>
+      <a href="/article" class="feat-link">
+        <article class="bigcard">
+          <Image src={img1} alt="Artikel billede 1" />
+          <div class="text">
+            <p class="label">UNMISSABLE FREE GEMS</p>
+            <h2>WHAT CAN’T I MISS IN BERLIN AS A CREATIVE FIRST-TIMER?</h2>
+          </div>
+        </article>
+      </a>
     </div>
   </section>
   <!-- KODENING TIL DET LYSERØDE AFSNIT-->
   <FeatArticle />
+  <Expolre />
+
+  <style>
+    /* FONTER */
+    @font-face {
+      font-family: "Anton";
+      src: url("/public/Fonts/Anton_font/Anton-Regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Inter";
+      src: url("/public/Fonts/Inter_font/static/Inter_18pt-Light.ttf")
+        format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "InterBold";
+      src: url("/public/Fonts/Inter_font/static/Inter_18pt-Bold.ttf")
+        format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* Style til lige efter heroen */
+
+    .efterhero {
+      margin: 0;
+      font-family: sans-serif;
+      color: #111;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      margin-top: -1rem;
+      margin-bottom: 8rem;
+    }
+
+    .venstre-side {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .venstre-side .card img {
+      width: auto;
+      height: 160px;
+      object-fit: cover;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .card {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      font-family: "InterBold";
+    }
+
+    h6 {
+      font-family: "Inter";
+    }
+
+    .bigcard img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .text {
+      padding: 1rem;
+      letter-spacing: 0.6px;
+    }
+
+    .label {
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .bigcard h2 {
+      font-size: 2rem;
+      font-family: "Anton";
+      font-weight: 900;
+      margin-top: 0.5rem;
+    }
+
+    .feat-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+  </style>
 </Layout>
-<style>
-  /* FONTER */
-  @font-face {
-    font-family: "Anton";
-    src: url("/public/Fonts/Anton_font/Anton-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Inter";
-    src: url("/public/Fonts/Inter_font/static/Inter_18pt-Light.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "InterBold";
-    src: url("/public/Fonts/Inter_font/static/Inter_18pt-Bold.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  /* Style til lige efter heroen */
-
-  .efterhero {
-    margin: 0;
-    font-family: sans-serif;
-    color: #111;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    margin-top: -1rem;
-  }
-
-  .venstre-side {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .venstre-side .card img {
-    width: auto;
-    height: 160px;
-    object-fit: cover;
-    margin: 0 auto;
-    display: block;
-  }
-
-  .card {
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    font-family: "InterBold";
-  }
-
-  h6 {
-    font-family: "Inter";
-  }
-
-  .bigcard img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    display: block;
-  }
-
-  .text {
-    padding: 1rem;
-    letter-spacing: 0.6px;
-  }
-
-  .label {
-    font-size: 0.75rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-  }
-
-  .bigcard h2 {
-    font-size: 2rem;
-    font-family: "Anton";
-    font-weight: 900;
-    margin-top: 0.5rem;
-  }
-
-  /* Style til det lyserøde afsnit */
-</style>

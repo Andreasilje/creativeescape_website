@@ -1,0 +1,125 @@
+---
+import { Image } from "astro:assets";
+import imgexpolre1 from "../assets/expolre1.webp";
+import imgexpolre2 from "../assets/expolre2.webp";
+import imgexpolre3 from "../assets/expolre3.webp";
+import imgexpolre4 from "../assets/expolre4.webp";
+---
+
+<section class="expolre">
+  <h5>EXPOLRE</h5>
+  <hr />
+  <h1>GUIDE TO OTHER PLACES</h1>
+
+  <div class="grid-item">
+    <article>
+      <Image src={imgexpolre1} alt="billede 1 til expolre" />
+      <h6 class="label">HUNGARY</h6>
+      <p>
+        BUDAPEST: One of Europe’s most affordable capitals — cheap eats,
+        budget-friendly...
+      </p>
+    </article>
+    <article>
+      <Image src={imgexpolre2} alt="billede 2 til expolre" />
+      <h6 class="label">JAPAN</h6>
+      <p>
+        KYOTO: Wooden teahouses, ancient temples, and cherry blossoms framing
+        timeless traditions.
+      </p>
+    </article>
+    <article>
+      <Image src={imgexpolre3} alt="billede 3 til expolre" />
+      <h6 class="label">SOUTH AFRICA</h6>
+      <p>
+        CAPE TOWN: Mountains meet ocean — a playground of landscapes, flavors,
+        and vibrant neighborhoods.
+      </p>
+    </article>
+    <article>
+      <Image src={imgexpolre4} alt="billede 4 til expolre" />
+      <h6 class="label">ICELAND</h6>
+      <p>
+        REYKJAVIK: Gateway to geysers, waterfalls, and northern lights — a city
+        surrounded by raw nature.
+      </p>
+    </article>
+  </div>
+</section>
+
+<style>
+  /* FONTER */
+  @font-face {
+    font-family: "Anton";
+    src: url("/public/Fonts/Anton_font/Anton-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Inter";
+    src: url("/public/Fonts/Inter_font/static/Inter_18pt-Light.ttf")
+      format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "InterBold";
+    src: url("/public/Fonts/Inter_font/static/Inter_18pt-Bold.ttf")
+      format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  h5 {
+    font-family: "InterBold";
+    padding-left: 1.3rem;
+  }
+
+  p,
+  h6 {
+    font-family: "Inter";
+    text-align: left;
+    padding-left: 1.3rem;
+  }
+
+  h1 {
+    font-family: "Anton";
+    padding-left: 1.3rem;
+  }
+
+  .expolre {
+    gap: 50px;
+    padding: 20px;
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+  }
+
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-item img {
+    width: 90%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .line {
+    height: 9px;
+    background-color: black;
+    border: none;
+    margin: 20px auto;
+  }
+
+  .grid-item p {
+    margin: 0;
+    font-size: 1rem;
+  }
+</style>
